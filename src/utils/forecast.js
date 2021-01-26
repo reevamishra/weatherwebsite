@@ -9,8 +9,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find with co-ordinates', undefined)
         } else {
             callback(undefined, {
-                temperature : body.current.temperature,
-                Status : body.current.weather_descriptions[0]
+                temperature: "The temperature outside is " + body.current.temperature,
+                Status: "The weather feels like " + body.current.weather_descriptions[0]
             })
         }
     })
